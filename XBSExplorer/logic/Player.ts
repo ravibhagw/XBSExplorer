@@ -7,3 +7,5 @@ class Player {
         this.forumId = forumId;
     }
 }
+
+export = Player;
