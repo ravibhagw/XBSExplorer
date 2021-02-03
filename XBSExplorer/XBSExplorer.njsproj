@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controllers\" />
+    <Folder Include="logic\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
@@ -52,6 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="controllers\playercontroller.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\Comparer.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\Player.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\PlayerAnalytics.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
