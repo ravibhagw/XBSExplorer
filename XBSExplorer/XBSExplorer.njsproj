@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="app.ts" />
+    <Content Include="teamdata.json" />
     <Content Include="data.json">
       <SubType>Code</SubType>
     </Content>
@@ -56,9 +57,19 @@
     <TypeScriptCompile Include="controllers\playercontroller.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="controllers\teamscontroller.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\ArrayPaginator.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="logic\Comparer.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\PagedResponse.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="logic\Team.ts" />
     <TypeScriptCompile Include="logic\Player.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>

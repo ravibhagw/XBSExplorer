@@ -1,6 +1,8 @@
 import express = require('express');
 import bodyParser = require('body-parser');
 import Player = require('../logic/Player');
+import PagedResponse = require('../logic/PagedResponse');
+import ArrayPaginator = require('../logic/ArrayPaginator');
 
 
 //const paginate = require('express-paginate');
@@ -17,21 +19,15 @@ router.get('/', (req, res) => {
     // Happy path only :)
     let page = parseInt(<string>(req.query.page));
     let limit = parseInt(<string>(req.query.limit));
-    
-    if (!page && !limit) {
-        res.json({
-            "data": data,
-            "page": "0",
-            "limit": "0"
-        });
-    }
-    else {
-        res.json({
-            "data": data.slice(page * limit, (page * limit) + limit),
-            "pageNumber": page,
-            "pageSize": limit
-        });
-    }
+
+
+
+    res.json(new PagedResponse(
+        ArrayPaginator.prototype.paginate(data, page, limit),
+        page,
+        limit
+    ));
+
 });
 
 router.get('/compare', (req, res) => {
