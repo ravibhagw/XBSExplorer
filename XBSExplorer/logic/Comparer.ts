@@ -1,5 +1,3 @@
 class Comparer {
-    constructor() {
 
-    }
 }
